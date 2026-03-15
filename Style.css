@@ -11,12 +11,21 @@ body {
 }
 
 header {
-    background-color: #90c986;
+    /* background-color: #d61e1e; */
     color: rgb(10, 19, 148);
     padding: 10px;
 }
 
+nav {
+    background-color: #90c986;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
 nav a {
+    text-align: center;
     color: rgb(39, 2, 2);
     display: inline-block;
     text-align: center;
