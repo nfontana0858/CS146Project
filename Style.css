@@ -1,8 +1,7 @@
 * {
     box-sizing: border-box;
 }
-
-
+/* Base code was ai generated but has been modified */
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
@@ -12,23 +11,27 @@ body {
 }
 
 header {
-    background-color: black;
-    color: white;
+    background-color: #90c986;
+    color: rgb(10, 19, 148);
     padding: 10px;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-nav a{
+nav a {
+    color: rgb(39, 2, 2);
+    display: inline-block;
+    text-align: center;
     text-decoration: none;
-    padding: 8px 12px;
+    padding: 8px 10px;
+    border-right: 2px solid #000000;
 }
 
+nav a:last-child { /* Makes it so last page doesn't have line to the right of it*/
+    border-right: none;
+}
+
+nav a:hover {
+    background-color: #7eb475;
+}
 
 main {
     max-width: 1000px;
@@ -44,6 +47,12 @@ main {
 
 h2 {
     margin-top: 0;
+}
+
+section {
+    background-color: rgba(159, 178, 230, 0.76);
+    padding: 15px;
+    margin-top: 15px;
 }
 
 footer {
