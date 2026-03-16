@@ -18,7 +18,7 @@ header {
 
 nav {
     background-color: #90c986;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -27,8 +27,6 @@ nav {
 nav a {
     text-align: center;
     color: rgb(39, 2, 2);
-    display: inline-block;
-    text-align: center;
     text-decoration: none;
     padding: 8px 10px;
     border-right: 2px solid #000000;
@@ -60,7 +58,16 @@ footer {
 /* Tablet sizing */
 @media (max-width: 900px) {
     nav {
-        gap: 12px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        justify-content: flex-start;
+        padding: 10px 6px;
+    }
+
+    nav a {
+        display: inline-block;
+        white-space: nowrap;
     }
 
     main {
@@ -80,15 +87,20 @@ footer {
     }
 
     nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        justify-content: flex-start;
+        padding: 10px 6px;
     }
 
     nav a {
-        width: 100%;
-        max-width: 220px;
-        text-align: center;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    nav a:last-child { /* Makes it so last page doesn't have line to the right of it*/
+        border: 1px solid black;
     }
 
     main {
