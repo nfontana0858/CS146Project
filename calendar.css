@@ -1,0 +1,85 @@
+/* Used Claude to help generate calendar styling
+
+/* ── Calendar layout ── */
+#calendar-container {
+    background-color: rgba(159, 178, 230, 0.76);
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    color: rgb(10, 19, 148);
+}
+
+.cal-nav-btn {
+    background: #90c986;
+    border: 2px solid #000;
+    padding: 5px 14px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cal-nav-btn:hover {
+    background: #7eb475;
+}
+
+/* ── Day-of-week header row ── */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.day-label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 6px 0;
+    border-bottom: 2px solid #000;
+    color: rgb(39, 2, 2);
+}
+
+/* ── Individual day cells ── */
+.day-cell {
+    min-height: 90px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(0,0,0,0.25);
+    padding: 4px;
+    vertical-align: top;
+}
+
+.day-cell.empty {
+    background: rgba(200, 200, 200, 0.2);
+}
+
+.day-cell.today {
+    border: 2px solid rgb(10, 19, 148);
+    background: rgba(159, 178, 230, 0.45);
+}
+
+.day-number {
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(39, 2, 2);
+    display: block;
+}
+
+.day-cell.today .day-number {
+    color: rgb(10, 19, 148);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .day-cell { min-height: 60px; }
+    .day-label { font-size: 11px; padding: 4px 0; }
+}
