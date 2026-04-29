@@ -74,13 +74,25 @@ document.getElementById('next-month').addEventListener('click', () => {
 document.getElementById('event-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const title = document.getElementById('event-title').value;
+    const title = document.getElementById('event-title').value.trim();
     const date = document.getElementById('event-date').value;
-    const notes = document.getElementById('event-notes').value;
+    const category = document.getElementById('event-category').value;
+    const notes = document.getElementById('event-notes').value.trim();
+
+    if (title === '') {
+        alert('Please enter an event title.');
+        return;
+    }
+
+    if (date === '') {
+        alert('Please select a date.');
+        return;
+    }
 
     events.push({
         title: title,
         date: date,
+        category: category,
         notes: notes
     });
 
